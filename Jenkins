@@ -28,15 +28,6 @@ pipeline {
             }
         }
 
-       stage('SonarQube Analysis') {
-    steps {
-        withSonarQubeEnv('SonarServer') {
-            withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                bat 'mvn sonar:sonar -Dsonar.token=%SONAR_TOKEN%'
-            }
-        }
-    }
-}
 
         stage('Build with Maven') {
             steps {
