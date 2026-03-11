@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 
-                git branch: 'main', url: 'https://github.com/Subhraneel2003/Devops_WebApp-Cg'
+                git branch: 'main', url: 'https://github.com/Subhraneel2003/Devops_WebApp-Cg.git'
             }
         }
 
